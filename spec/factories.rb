@@ -10,5 +10,4 @@ end
 Factory.define :restaurant do |r|
   r.name 'foo'
   r.address '159 York Boulevard, Richmond Hill'
-  r.gps_location '43.848032,-79.376501'
 end
