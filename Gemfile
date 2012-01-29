@@ -24,6 +24,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'geocoder'
+
 gem 'therubyracer'	#needed to get rid of javascipt runtime error
 
 # To use ActiveModel has_secure_password
@@ -38,11 +40,11 @@ gem 'therubyracer'	#needed to get rid of javascipt runtime error
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
 group:development do
  gem 'rspec-rails' 
+  # To use debugger
+  # gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 group:test do

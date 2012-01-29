@@ -19,3 +19,5 @@ doc/
 
 # Ignore text editor temp files
 *.*~
+
+/bin/*
