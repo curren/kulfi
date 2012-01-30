@@ -10,17 +10,7 @@ gem 'sqlite3'
 # to try fixing rake error
 gem 'nokogiri'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
-
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'devise'
 
 gem 'jquery-rails'
 
@@ -40,19 +30,36 @@ gem 'therubyracer'	#needed to get rid of javascipt runtime error
 # Deploy with Capistrano
 # gem 'capistrano'
 
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
 
-group:development do
+group :development do
  gem 'rspec-rails' 
   # To use debugger
   # gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
-group:test do
+group :test do
  gem 'rspec-rails' 
  gem 'database_cleaner'
  gem 'factory_girl_rails'
  gem 'cucumber-rails'
  gem 'capybara'
  gem 'database_cleaner'
+end
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer'
+
+
+  gem 'uglifier', '>= 1.0.3'
 end
 
