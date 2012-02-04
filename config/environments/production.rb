@@ -20,6 +20,14 @@ Kulfi::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  #added as per devise - required rails configuration
+  config.action_mailer.default_url_options = { :host => 'http://kulfi.heroku.com'}
+
+  #If you are deploying Rails 3.1 on Heroku, you may want to set:
+  #On config/application.rb forcing your application to not access the DB
+  #or load models when precompiling your assets.
+  config.assets.initialize_on_precompile = false
+
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 

@@ -24,6 +24,9 @@ Kulfi::Application.configure do
 
   # Raise exception on mass assignment protection for Active Record models
   config.active_record.mass_assignment_sanitizer = :strict
+  
+  #added as per devise - required rails configuration
+  config.action_mailer.default_url_options = { :host => 'localhost:3000'}
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
